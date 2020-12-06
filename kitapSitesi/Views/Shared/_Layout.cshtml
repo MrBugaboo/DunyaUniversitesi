@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Dünya Üniversitesi Websitesi</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <table>
+            <tr>
+                <td><img src="https://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/64/globe-icon.png"/></td>
+                <td style="width:100px;"></td>
+                <td><p style="color:dodgerblue; font-size:40px;">Dünya Üniversitesi</p></td>
+            </tr>
+        </table>
+        <div style="width:100%; width:100vw; border:1px solid black;"></div>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Ana Sayfa", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Hakkında", "Hakkinda", "Home")</li>
+                    <li>@Html.ActionLink("İletişim", "Iletisim", "Home")</li>
+                    <li>@Html.ActionLink("Bölümler", "Bolumler", "Bolumler")</li>
+                    <li>@Html.ActionLink("Araştırma", "Projeler", "Projeler")</li>
+                    <li>@Html.ActionLink("Taban Puanları", "puanlariGetir", "taban")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Dünya Üniversitesi</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Bolumler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    string f1 = "Mühendislik Fakültesi";
+    string f2 = "Sağlık Fakültesi";
+    string f3 = "Fen Fakültesi";
+
+    string b11 = "Makine Mühendisliği";
+    string b12 = "Elektrik Mühendisliği";
+    string b13 = "Bilgisayar Mühendisliği";
+
+    string b21 = "Tıp";
+    string b22 = "Eczacılık";
+    string b23 = "Veterinerlik";
+    string b24 = "Diş Hekimliği";
+
+    string b31 = "Matematik";
+    string b32 = "Fizik";
+    string b33 = "Kimya";
+    string b34 = "Biyoloji";
+}
+<br />
+<br />
+<br />
+<br />
+<center><p style="font-weight:bold; font-size:16px;">@ViewBag.Message</p></center>
+<center>
+    <table>
+        <table>
+            <tr style="font-weight:bold; font-size:16px; background-color:darkslateblue;">
+                <td style="width:240px; padding: 15px;"></td>
+                <td style="width:240px; padding: 15px;">@f1</td>
+                <td style="width:240px; padding: 15px;"></td>
+            </tr>
+            <tr style="background-color: steelblue;">
+                <td style="width:240px; padding: 15px;">@b11</td>
+                <td style="width:240px; padding: 15px;">@b12</td>
+                <td style="width:240px; padding: 15px;">@b13</td>
+            </tr>
+            <tr style="font-weight:bold; font-size:16px; background-color:hotpink;">
+                <td style="width:240px; padding: 15px;"></td>
+                <td style="width:240px; padding: 15px;">@f2</td>
+                <td style="width:240px; padding: 15px;"></td>
+            </tr>
+        </table>
+        <tr>
+            <table>
+                <tr style="background-color: lightpink;">
+                    <td style="width:180px; padding: 15px;">@b21</td>
+                    <td style="width:180px; padding: 15px;">@b22</td>
+                    <td style="width:180px; padding: 15px;">@b23</td>
+                    <td style="width:180px; padding: 15px;">@b24</td>
+                </tr>
+            </table>
+        </tr>
+        <tr>
+            <table>
+                <tr style="font-weight:bold; font-size:16px; background-color:rebeccapurple;">
+                    <td style="width:240px; padding: 15px;"></td>
+                    <td style="width:240px; padding: 15px;">@f3</td>
+                    <td style="width:240px; padding: 15px;"></td>
+                </tr>
+            </table>
+        </tr>
+    <tr>
+        <table>
+            <tr style="background-color: mediumpurple;">
+                <td style="width:180px; padding: 15px;">@b31</td>
+                <td style="width:180px; padding: 15px;">@b32</td>
+                <td style="width:180px; padding: 15px;">@b33</td>
+                <td style="width:180px; padding: 15px;">@b34</td>
+            </tr>
+        </table>
+    </tr>
+    </table>
+</center>
+

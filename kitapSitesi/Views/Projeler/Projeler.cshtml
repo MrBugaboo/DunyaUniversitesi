@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Projeler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+<center>
+    <table>
+        <tr style="font-weight:bold; font-size:16px; background-color:darkorange; text-align:center;">
+            <td style="width:240px; padding: 15px;"></td>
+            <td style="width:240px; padding: 15px;">Projeler</td>
+            <td style="width:240px; padding: 15px;"></td>
+        </tr>
+        <tr style="text-align: center; font-weight:bold; font-size:13px; background-color:yellow;">
+            <td style="width:240px; padding: 15px;">@ViewBag.uyduProjesi</td>
+            <td style="width:240px; padding: 15px;">@ViewBag.oyunProjesi</td>
+            <td style="width:240px; padding: 15px;">@ViewBag.roketProjesi</td>
+        </tr>
+        <tr style="text-align: center;">
+            <td style="width:240px; padding: 15px; background-color:cadetblue;">@ViewBag.uyduMesaj</td>
+            <td style="width:240px; padding: 15px; background-color:indianred;">@ViewBag.oyunMesaj</td>
+            <td style="width:240px; padding: 15px; background-color:yellowgreen;">@ViewBag.roketMesaj</td>
+        </tr>
+        <tr style="font-weight:bold; font-size:16px; background-color:darkgray; text-align:center;">
+            <td style="width:240px; padding: 15px;"></td>
+            <td style="width:240px; padding: 15px;">Laboratuvarlar</td>
+            <td style="width:240px; padding: 15px;"></td>
+        </tr>
+        <tr style="text-align: center; font-weight:bold; font-size:13px; background-color:white;">
+            <td style="width:240px; padding: 15px;">@ViewBag.lab1</td>
+            <td style="width:240px; padding: 15px;">@ViewBag.lab2</td>
+            <td style="width:240px; padding: 15px;">@ViewBag.lab3</td>
+        </tr>
+    </table>
+ </center>
+

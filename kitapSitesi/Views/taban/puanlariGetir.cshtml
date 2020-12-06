@@ -1,0 +1,56 @@
+﻿@model IEnumerable<kitapSitesi.Models.tabanPuanlari>
+
+@{
+    ViewBag.Title = "puanlariGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>puanlariGetir</h2>
+<br />
+<br />
+<table class="table">
+    <tr style="background-color:yellowgreen;">
+        <th>
+            @Html.DisplayNameFor(model => model.Fakulte)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Bolum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Puan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Siralama)
+        </th>
+        <th></th>
+    </tr>
+
+    @{int indis = 1; } 
+@foreach (var item in Model)
+{
+    indis++;
+    string renkTek = "darkseagreen";
+    string renkCift = "darkolivegreen";
+    string yaziRenkBeyaz = "white";
+    string yaziRenkSiyah = "black";
+    string yaziRenk = "";
+    string renk = "";
+    if (indis % 2 == 0) { renk = renkCift; yaziRenk = yaziRenkBeyaz; } else { renk = renkTek; yaziRenk = yaziRenkSiyah; }
+
+    <tr style="background-color:@renk; color:@yaziRenk;">
+        <td>
+            @Html.DisplayFor(modelItem => item.Fakulte)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Bolum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Puan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Siralama)
+        </td>
+    </tr>
+}
+
+</table>
